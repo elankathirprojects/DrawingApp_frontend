@@ -22,7 +22,7 @@ function Header() {
       return;
     }
 
-    fetch("http://localhost:8081/logout", { 
+    fetch("https://drawingappackend.onrender.com/logout", { 
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username }),

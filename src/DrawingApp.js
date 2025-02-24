@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { SketchPicker } from "react-color";
 import "./Styles.css";
 
-const socket = io("http://localhost:8081");
+const socket = io("https://drawingappackend.onrender.com");
 
 class DrawingApp extends Component {
   constructor(props) {
@@ -51,7 +51,7 @@ class DrawingApp extends Component {
 
   fetchOnlineUsers = async () => {
     try {
-      const response = await fetch("http://localhost:8081/online-users");
+      const response = await fetch("https://drawingappackend.onrender.com/online-users");
       const data = await response.json();
       if (data.success) {
         this.setState({ onlineUsers: data.users });
